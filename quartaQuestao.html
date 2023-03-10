@@ -1,0 +1,41 @@
+<script>
+const distanciaTotal = 100; // em km
+const velocidadeCarro = 110; // em km/h
+const velocidadeCaminhao = 80; // em km/h
+const tempoPedagio = 5; // em minutos
+
+// converter tempo do pedágio para horas
+const tempoPedagioEmHoras = tempoPedagio / 60;
+
+// calcular a distância percorrida pelo caminhão até o primeiro pedágio
+const distanciaCaminhaoPedagio1 = distanciaTotal / 2;
+const tempoCaminhaoPedagio1 = distanciaCaminhaoPedagio1 / velocidadeCaminhao;
+
+// calcular a distância percorrida pelo carro até o primeiro pedágio
+const distanciaCarroPedagio1 = distanciaTotal - distanciaCaminhaoPedagio1;
+const tempoCarroPedagio1 = distanciaCarroPedagio1 / velocidadeCarro;
+
+// calcular a distância percorrida pelo caminhão até o segundo pedágio
+const distanciaCaminhaoPedagio2 = distanciaTotal / 2;
+const tempoCaminhaoPedagio2 = distanciaCaminhaoPedagio2 / velocidadeCaminhao + tempoPedagioEmHoras;
+
+// calcular a distância percorrida pelo carro até o segundo pedágio
+const distanciaCarroPedagio2 = distanciaTotal - distanciaCaminhaoPedagio2;
+const tempoCarroPedagio2 = distanciaCarroPedagio2 / velocidadeCarro;
+
+// calcular a distância total percorrida pelo caminhão até o encontro
+const distanciaTotalCaminhao = distanciaCaminhaoPedagio1 + distanciaCaminhaoPedagio2;
+
+// calcular a distância total percorrida pelo carro até o encontro
+const distanciaTotalCarro = distanciaCarroPedagio1 + distanciaCarroPedagio2;
+
+// verificar qual veículo estará mais próximo de Ribeirão Preto no momento do encontro
+if (distanciaTotalCaminhao < distanciaTotalCarro) {
+  console.log('O caminhão estará mais próximo de Ribeirão Preto no momento do encontro.');
+} else if (distanciaTotalCarro < distanciaTotalCaminhao) {
+  console.log('O carro estará mais próximo de Ribeirão Preto no momento do encontro.');
+} else {
+  console.log('O carro e o caminhão estarão equidistantes de Ribeirão Preto no momento do encontro.');
+}
+
+</script>
