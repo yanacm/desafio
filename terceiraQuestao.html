@@ -1,0 +1,58 @@
+<script>
+// Sequência a)
+function proximoA(n) {
+  return n + 2;
+}
+
+console.log(proximoA(7)); // Próximo número é 9
+
+// Sequência b)
+function proximoB(n) {
+  return n * 2;
+}
+
+console.log(proximoB(64)); // Próximo número é 128
+
+// Sequência c)
+function proximoC(n) {
+  let i = Math.sqrt(n) + 1;
+  return i * i;
+}
+
+console.log(proximoC(36)); // Próximo número é 49
+
+// Sequência d)
+function proximoD(n) {
+  return n + 12;
+}
+
+console.log(proximoD(64)); // Próximo número é 100
+
+// Sequência e)
+function proximoE(a, b) {
+  return a + b;
+}
+
+console.log(proximoE(5, 8)); // Próximo número é 13
+
+// Sequência f)
+function proximoF(n) {
+  if (n === 2) {
+    return 10;
+  } else if (n === 10) {
+    return 12;
+  } else if (n === 12) {
+    return 16;
+  } else if (n === 16) {
+    return 17;
+  } else if (n === 17) {
+    return 18;
+  } else if (n === 18) {
+    return 19;
+  } else {
+    return null;
+  }
+}
+
+console.log(proximoF(2)); // Próximo número é 10
+</script>
